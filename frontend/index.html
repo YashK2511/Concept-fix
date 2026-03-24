@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Concept Fix | AI Misconception Detector</title>
+    
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-secondary-container": "#f1bfff",
+              "on-tertiary-container": "#00575b",
+              "tertiary-fixed": "#00f4fe",
+              "tertiary-dim": "#00e5ee",
+              "primary-container": "#9396ff",
+              "on-secondary-fixed": "#580078",
+              "surface-dim": "#0d0e14",
+              "outline": "#75757d",
+              "inverse-on-surface": "#54545c",
+              "surface-container-highest": "#24252e",
+              "surface-container-low": "#12131a",
+              "on-error-container": "#ffb2b9",
+              "surface-variant": "#24252e",
+              "primary-dim": "#5c5eff",
+              "primary-fixed-dim": "#8386ff",
+              "primary-fixed": "#9396ff",
+              "on-primary-container": "#0a0081",
+              "on-primary-fixed": "#000000",
+              "on-primary-fixed-variant": "#0f009d",
+              "error": "#ff6e84",
+              "inverse-primary": "#4240f5",
+              "secondary-fixed-dim": "#ebadff",
+              "on-surface-variant": "#abaab3",
+              "surface": "#0d0e14",
+              "primary": "#a3a6ff",
+              "secondary-container": "#6e208c",
+              "secondary-fixed": "#f2c1ff",
+              "on-surface": "#f4f2fc",
+              "error-container": "#a70138",
+              "on-tertiary-fixed-variant": "#006266",
+              "surface-container": "#181921",
+              "on-tertiary-fixed": "#004346",
+              "on-background": "#f4f2fc",
+              "inverse-surface": "#fbf8ff",
+              "on-tertiary": "#006165",
+              "on-primary": "#1000a3",
+              "on-secondary-fixed-variant": "#792c97",
+              "background": "#0d0e14",
+              "surface-tint": "#a3a6ff",
+              "surface-container-high": "#1e1f27",
+              "on-secondary": "#4c0068",
+              "surface-container-lowest": "#000000",
+              "tertiary-fixed-dim": "#00e5ee",
+              "secondary-dim": "#ce7eec",
+              "tertiary-container": "#00f4fe",
+              "outline-variant": "#47474f",
+              "surface-bright": "#2a2c35",
+              "error-dim": "#d73357",
+              "on-error": "#490013",
+              "tertiary": "#a1faff",
+              "secondary": "#dd8bfb"
+            },
+            fontFamily: {
+              "headline": ["Plus Jakarta Sans", "sans-serif"],
+              "body": ["Manrope", "sans-serif"],
+              "label": ["Space Grotesk", "sans-serif"]
+            },
+            borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" },
+          },
+        },
+      }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Manrope:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  </head>
+  <body class="bg-surface text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

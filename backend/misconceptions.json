@@ -1,0 +1,122 @@
+[
+  {
+    "id": "syntax-missing-colon",
+    "error_pattern": "SyntaxError.*expected ':'",
+    "misconception": "Forgetting the colon at the end of a control flow statement (e.g., if, for, while, def).",
+    "explanation": "Python uses a colon (`:`) to indicate the start of a new indented block of code.",
+    "fix": "Add a colon `:` at the end of the line.",
+    "practice": "Write a basic `if` statement checking if a variable `x` is greater than 5, making sure to include the colon."
+  },
+  {
+    "id": "syntax-unmatched-paren",
+    "error_pattern": "SyntaxError.*unmatched '\\('",
+    "misconception": "Mismatched parentheses, often forgetting to close a function call like `print()`.",
+    "explanation": "Every opening parenthesis `(` must have a matching closing parenthesis `)`. This often happens if you nest multiple function calls.",
+    "fix": "Count the opening and closing parentheses and ensure they match up.",
+    "practice": "Write a `print()` statement that outputs the type of an input string, ensuring all parentheses are closed."
+  },
+  {
+    "id": "indentation-error",
+    "error_pattern": "IndentationError.*expected an indented block",
+    "misconception": "Mixing tabs and spaces or misunderstanding how Python scopes are created by indentation.",
+    "explanation": "Python relies on indentation (usually 4 spaces) to define the scope of loops, functions, and conditionals, instead of brackets `{}`.",
+    "fix": "Check the line causing the error and ensure it is properly indented relative to the line above it.",
+    "practice": "Write a `for` loop that prints numbers 1 to 3, paying close attention to the indentation."
+  },
+  {
+    "id": "type-concat-str-int",
+    "error_pattern": "TypeError.*can only concatenate str .*not \\\"int\\\".* to str",
+    "misconception": "Assuming that a string and an integer can be automatically joined together without conversion.",
+    "explanation": "Python is strongly typed and does not implicitly convert numbers to strings during concatenation (`+`).",
+    "fix": "Use the `str()` function to convert the integer before adding it, or use an f-string: `f\\\"{variable}\\\"`.",
+    "practice": "Create a variable `age = 25` and print the sentence 'I am 25 years old' using string concatenation."
+  },
+  {
+    "id": "type-add-int-str",
+    "error_pattern": "TypeError.*unsupported operand type\\(s\\) for \\+: 'int' and 'str'",
+    "misconception": "Trying to perform arithmetic addition between a number and a string representation of a number.",
+    "explanation": "If a user inputs a number via `input()`, it is treated as text (a string). It must be explicitly converted to an integer before doing math.",
+    "fix": "Wrap the string variable in `int()`, e.g., `int(my_var)`.",
+    "practice": "Take numeric input from a user, convert it to an integer, and add 10 to it."
+  },
+  {
+    "id": "name-not-defined",
+    "error_pattern": "NameError.*name '.*' is not defined",
+    "misconception": "Either a typo in the variable name, or trying to use a variable before it has been assigned a value.",
+    "explanation": "Variables must be initialized (given a value) before they can be used or referenced.",
+    "fix": "Double-check the spelling of the variable. Ensure it was assigned a value earlier in the code.",
+    "practice": "Define a variable called `score` and set it to 100 before attempting to print it."
+  },
+  {
+    "id": "index-out-of-range",
+    "error_pattern": "IndexError.*list index out of range",
+    "misconception": "Misunderstanding 0-based indexing or trying to access elements beyond the size of a list.",
+    "explanation": "Python lists are 0-indexed, meaning the first element is at index 0. A list of 5 items has valid indices from 0 to 4.",
+    "fix": "Ensure the index you are requesting is between 0 and `len(my_list) - 1`.",
+    "practice": "Create a list of 3 colors and print the last color using index `2`."
+  },
+  {
+    "id": "key-error",
+    "error_pattern": "KeyError.*",
+    "misconception": "Attempting to retrieve a value from a dictionary using a key that doesn't exist.",
+    "explanation": "Dictionaries organize data by key-value pairs. You cannot look up a value if the key is not in the dictionary.",
+    "fix": "Check that the key name is spelled correctly. Alternatively, use the `.get('key')` method, which safely returns `None` instead of throwing an error.",
+    "practice": "Create a dictionary with keys 'x' and 'y', and practice retrieving 'x'."
+  },
+  {
+    "id": "value-error-int",
+    "error_pattern": "ValueError.*invalid literal for int\\(\\)",
+    "misconception": "Trying to convert text that contains letters or symbols into an integer.",
+    "explanation": "The `int()` function can only convert strings that look exactly like whole numbers (e.g., '42'). It will fail if you give it non-numeric text like 'hello' or a decimal '3.14'.",
+    "fix": "Ensure the variable passed to `int()` only contains numbers. If it's a decimal string, convert it to `float()` first.",
+    "practice": "Write code to convert the string '55' to an integer."
+  },
+  {
+    "id": "type-not-callable",
+    "error_pattern": "TypeError.*'.*' object is not callable",
+    "misconception": "Confusing square brackets `[]` (for list access) with parentheses `()` (for function calls), or naming a variable the same as a built-in function (shadowing).",
+    "explanation": "This tells you that you are trying to call an object (like a list or string) as if it were a function.",
+    "fix": "If accessing a list element, change `()` to `[]`. Make sure you didn't define a variable named `list` or `print`.",
+    "practice": "Create a list `my_list = [1, 2]` and access the first element using square brackets."
+  },
+  {
+    "id": "zero-division",
+    "error_pattern": "ZeroDivisionError.*division by zero",
+    "misconception": "Attempting to divide a number by 0, which is mathematically undefined.",
+    "explanation": "Python will crash if a division operation resolves to `x / 0`.",
+    "fix": "Add an `if` condition to verify the denominator is not zero before performing the division.",
+    "practice": "Write a function that divides two numbers but returns 'Error' if the denominator is 0."
+  },
+  {
+    "id": "attribute-error-list-push",
+    "error_pattern": "AttributeError.*'list' object has no attribute 'push'",
+    "misconception": "Attempting to use JavaScript array methods (like `.push()`) in Python.",
+    "explanation": "Different programming languages use different method names. To add an item to the end of a list in Python, you use `.append()`, not `.push()`.",
+    "fix": "Change `.push(item)` to `.append(item)`.",
+    "practice": "Create an empty list and use `.append()` to add the number 1 to it."
+  },
+  {
+    "id": "missing-positional-argument",
+    "error_pattern": "TypeError.*missing.*required positional argument",
+    "misconception": "Calling a function without providing all the necessary inputs that the function definition asks for.",
+    "explanation": "When a function is defined as `def add(a, b):`, you must provide exactly two arguments when calling it, like `add(5, 3)`.",
+    "fix": "Check the function definition to see how many arguments it needs, and pass the missing values in your function call.",
+    "practice": "Define a function that takes one argument and prints it, then call that function with the argument 'Hello'."
+  },
+  {
+    "id": "assignment-in-condition",
+    "error_pattern": "SyntaxError.*cannot assign to conditional expression|SyntaxError.*invalid syntax",
+    "misconception": "Using a single equals sign `=` (assignment) instead of double equals `==` (comparison) inside an `if` statement.",
+    "explanation": "In Python, `=` means 'make this variable equal to this value'. `==` means 'are these two values exactly the same?'.",
+    "fix": "Change `=` to `==` in your logical condition.",
+    "practice": "Write an `if` statement checking if `x == 10`."
+  },
+  {
+    "id": "module-not-found",
+    "error_pattern": "ModuleNotFoundError.*No module named '.*'",
+    "misconception": "Forgetting to install an external library or misspelling the import name.",
+    "explanation": "Python is trying to load a library of code to use, but cannot find it installed in your current environment.",
+    "fix": "Check your spelling. If it's a third-party library, ensure you have run `pip install <module_name>` in your terminal.",
+    "practice": "Write an `import math` statement and use `math.sqrt(9)`."
+  }
+]

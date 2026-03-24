@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Concept Fix | Intellectual Futurism</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&amp;family=Manrope:wght@400;500;600&amp;family=Space+Grotesk:wght@500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "on-secondary-container": "#f1bfff",
+                        "on-tertiary-container": "#00575b",
+                        "tertiary-fixed": "#00f4fe",
+                        "tertiary-dim": "#00e5ee",
+                        "primary-container": "#9396ff",
+                        "on-secondary-fixed": "#580078",
+                        "surface-dim": "#0d0e14",
+                        "outline": "#75757d",
+                        "inverse-on-surface": "#54545c",
+                        "surface-container-highest": "#24252e",
+                        "surface-container-low": "#12131a",
+                        "on-error-container": "#ffb2b9",
+                        "surface-variant": "#24252e",
+                        "primary-dim": "#5c5eff",
+                        "primary-fixed-dim": "#8386ff",
+                        "primary-fixed": "#9396ff",
+                        "on-primary-container": "#0a0081",
+                        "on-primary-fixed": "#000000",
+                        "on-primary-fixed-variant": "#0f009d",
+                        "error": "#ff6e84",
+                        "inverse-primary": "#4240f5",
+                        "secondary-fixed-dim": "#ebadff",
+                        "on-surface-variant": "#abaab3",
+                        "surface": "#0d0e14",
+                        "primary": "#a3a6ff",
+                        "secondary-container": "#6e208c",
+                        "secondary-fixed": "#f2c1ff",
+                        "on-surface": "#f4f2fc",
+                        "error-container": "#a70138",
+                        "on-tertiary-fixed-variant": "#006266",
+                        "surface-container": "#181921",
+                        "on-tertiary-fixed": "#004346",
+                        "on-background": "#f4f2fc",
+                        "inverse-surface": "#fbf8ff",
+                        "on-tertiary": "#006165",
+                        "on-primary": "#1000a3",
+                        "on-secondary-fixed-variant": "#792c97",
+                        "background": "#0d0e14",
+                        "surface-tint": "#a3a6ff",
+                        "surface-container-high": "#1e1f27",
+                        "on-secondary": "#4c0068",
+                        "surface-container-lowest": "#000000",
+                        "tertiary-fixed-dim": "#00e5ee",
+                        "secondary-dim": "#ce7eec",
+                        "tertiary-container": "#00f4fe",
+                        "outline-variant": "#47474f",
+                        "surface-bright": "#2a2c35",
+                        "error-dim": "#d73357",
+                        "on-error": "#490013",
+                        "tertiary": "#a1faff",
+                        "secondary": "#dd8bfb"
+                    },
+                    fontFamily: {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Manrope"],
+                        "label": ["Space Grotesk"]
+                    },
+                    borderRadius: { "DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "full": "9999px" },
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Manrope', sans-serif;
+            background-color: #0d0e14;
+            color: #f4f2fc;
+            overflow-x: hidden;
+        }
+        .mesh-gradient {
+            background: radial-gradient(at 0% 0%, rgba(163, 166, 255, 0.15) 0px, transparent 50%),
+                        radial-gradient(at 100% 0%, rgba(221, 139, 251, 0.1) 0px, transparent 50%),
+                        radial-gradient(at 50% 100%, rgba(161, 250, 255, 0.05) 0px, transparent 50%);
+        }
+        .glass-card {
+            background: rgba(36, 37, 46, 0.4);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(163, 166, 255, 0.1);
+        }
+        .floating {
+            animation: floating 6s ease-in-out infinite;
+        }
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface selection:bg-primary-container selection:text-on-primary-container">
+<!-- Top Navigation -->
+<nav class="fixed top-0 w-full z-50 bg-slate-950/40 backdrop-blur-xl shadow-[0_8px_32px_0_rgba(0,0,0,0.3)]">
+<div class="flex justify-between items-center w-full px-8 py-4 mx-auto max-w-7xl">
+<div class="text-2xl font-bold tracking-tight text-indigo-400 dark:text-indigo-300 font-headline">Concept Fix</div>
+<div class="hidden md:flex items-center gap-8 font-label text-sm uppercase tracking-wider">
+<a class="text-indigo-400 dark:text-indigo-300 border-b-2 border-indigo-500 pb-1" href="#">Pathways</a>
+<a class="text-slate-400 hover:text-slate-200 transition-colors" href="#">Sandbox</a>
+<a class="text-slate-400 hover:text-slate-200 transition-colors" href="#">Community</a>
+<a class="text-slate-400 hover:text-slate-200 transition-colors" href="#">Pro</a>
+</div>
+<div class="flex items-center gap-4">
+<button class="px-6 py-2.5 bg-gradient-to-r from-primary to-primary-dim text-on-primary rounded-full font-label text-sm font-bold hover:scale-105 active:scale-95 transition-all">
+                    Start Coding
+                </button>
+</div>
+</div>
+</nav>
+<main class="relative pt-32 mesh-gradient">
+<!-- Background Decorative Elements -->
+<div class="absolute top-40 left-10 w-64 h-64 bg-primary/10 rounded-full blur-[100px] -z-10"></div>
+<div class="absolute top-80 right-20 w-96 h-96 bg-secondary/10 rounded-full blur-[120px] -z-10"></div>
+<!-- Hero Section -->
+<section class="max-w-7xl mx-auto px-8 text-center mb-24">
+<div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-surface-container-high border border-outline-variant/20 mb-8">
+<span class="material-symbols-outlined text-primary text-sm" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<span class="font-label text-xs font-bold tracking-widest text-primary uppercase">The Future of Cognition</span>
+</div>
+<h1 class="text-6xl md:text-8xl font-headline font-extrabold tracking-tighter mb-6 bg-gradient-to-b from-on-surface to-on-surface-variant bg-clip-text text-transparent">
+                AI Learning with <br/><span class="text-primary italic">misconceptions</span>
+</h1>
+<p class="max-w-2xl mx-auto text-xl text-on-surface-variant font-body leading-relaxed mb-12">
+                Don't just know you are wrong, But understand why are you wrong.
+            </p>
+<div class="flex flex-col sm:flex-row justify-center gap-4">
+<button class="px-8 py-4 bg-primary text-on-primary rounded-full font-label font-bold text-lg hover:shadow-[0_0_30px_-5px_rgba(163,166,255,0.5)] transition-all">
+                    Launch Sandbox
+                </button>
+<button class="px-8 py-4 bg-surface-container-highest text-primary rounded-full font-label font-bold text-lg hover:bg-surface-container-high transition-all">
+                    View Pathways
+                </button>
+</div>
+</section>
+<!-- Dual-Pane Feature: Code & AI Analysis -->
+<section class="max-w-7xl mx-auto px-8 mb-32 relative">
+<!-- Floating Abstract Decorations -->
+<div class="absolute -top-12 -left-12 floating hidden lg:block">
+<div class="w-24 h-24 rounded-2xl bg-gradient-to-br from-tertiary to-transparent opacity-20 blur-sm"></div>
+</div>
+<div class="absolute -bottom-12 -right-12 floating hidden lg:block" style="animation-delay: -2s;">
+<div class="w-32 h-32 rounded-full bg-gradient-to-tr from-secondary to-transparent opacity-20 blur-sm"></div>
+</div>
+<div class="grid lg:grid-cols-2 gap-8 items-stretch">
+<!-- Python Code Editor Pane -->
+<div class="glass-card rounded-xl overflow-hidden flex flex-col shadow-2xl">
+<div class="bg-surface-container-highest/50 px-6 py-4 flex items-center justify-between border-b border-outline-variant/10">
+<div class="flex items-center gap-4">
+<div class="flex gap-1.5">
+<div class="w-3 h-3 rounded-full bg-error-container/40"></div>
+<div class="w-3 h-3 rounded-full bg-secondary-container/40"></div>
+<div class="w-3 h-3 rounded-full bg-tertiary-container/40"></div>
+</div>
+<span class="font-label text-xs text-on-surface-variant tracking-widest uppercase">main.py</span>
+</div>
+<span class="material-symbols-outlined text-on-surface-variant text-lg">settings</span>
+</div>
+<div class="p-8 font-label text-sm leading-relaxed overflow-x-auto bg-slate-950/20">
+<div class="flex gap-4">
+<span class="text-outline/40 select-none">1</span>
+<code class="text-on-surface"><span class="text-secondary">def</span> <span class="text-tertiary">calculate_avg</span>(scores):</code>
+</div>
+<div class="flex gap-4">
+<span class="text-outline/40 select-none">2</span>
+<code class="text-on-surface pl-4">total = <span class="text-primary-dim">0</span></code>
+</div>
+<div class="flex gap-4">
+<span class="text-outline/40 select-none">3</span>
+<code class="text-on-surface pl-4"><span class="text-secondary">for</span> s <span class="text-secondary">in</span> scores:</code>
+</div>
+<div class="flex gap-4">
+<span class="text-outline/40 select-none">4</span>
+<code class="text-on-surface pl-8">total += s</code>
+</div>
+<div class="flex gap-4">
+<span class="text-outline/40 select-none">5</span>
+<code class="text-on-surface pl-4"><span class="text-secondary">return</span> total / <span class="text-primary-dim">len</span>(scores) <span class="text-error-container bg-error-container/10 px-1 rounded"> - 1</span></code>
+</div>
+<div class="flex gap-4 mt-4">
+<span class="text-outline/40 select-none">6</span>
+<code class="text-outline-variant"># Error expected in output logic</code>
+</div>
+</div>
+</div>
+<!-- Error Analysis High-Tech Diagnostic -->
+<div class="glass-card rounded-xl p-1 shadow-2xl bg-gradient-to-br from-primary/10 to-transparent">
+<div class="bg-surface-dim/80 h-full w-full rounded-[0.9rem] p-8 flex flex-col">
+<div class="flex items-center gap-3 mb-8">
+<div class="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-xl">psychology</span>
+</div>
+<div>
+<h3 class="font-headline text-lg font-bold">Error Analysis</h3>
+<p class="font-label text-[10px] uppercase tracking-[0.2em] text-on-surface-variant">Diagnostics Active</p>
+</div>
+</div>
+<div class="space-y-6 flex-grow">
+<div class="p-6 rounded-lg bg-surface-container-high relative overflow-hidden group">
+<div class="absolute left-0 top-0 h-full w-1 bg-error"></div>
+<div class="flex justify-between items-start mb-2">
+<span class="font-label text-xs font-bold text-error uppercase">Logic Misconception</span>
+<span class="font-label text-[10px] text-outline">Severity: High</span>
+</div>
+<p class="text-sm font-body text-on-surface-variant leading-relaxed">
+                                    You've applied a <span class="text-on-surface font-bold">"Zero-Index Correction"</span> to a calculation result. While common in array indexing, mathematical averages don't require an offset.
+                                </p>
+</div>
+<div class="p-6 rounded-lg bg-surface-container relative overflow-hidden">
+<div class="absolute left-0 top-0 h-full w-1 bg-tertiary"></div>
+<h4 class="font-label text-xs font-bold text-tertiary uppercase mb-2">Deep Neural Context</h4>
+<p class="text-sm font-body text-on-surface-variant leading-relaxed">
+                                    Based on your last 3 sessions, you consistently confuse <span class="italic">iterator bounds</span> with <span class="italic">scalar outputs</span>. Let's re-run the mean calculation theory.
+                                </p>
+</div>
+</div>
+<div class="mt-8 pt-6 border-t border-outline-variant/10 flex items-center justify-between">
+<div class="flex -space-x-2">
+<img alt="" class="w-8 h-8 rounded-full border-2 border-surface" data-alt="portrait of a young man with professional lighting and neutral expression" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAwN8DxyPOG3JsH-DLHu7AFkULn-6f1nhP9g7yo0c-9XwlPy4rYwCTOcAp9X7gBtwvCvZQ3rDrYFhrX_hIBSJpVBtqc4L5p-pKQkfemDLCIovIXv19pKKiWNq-nOZxgiCDbh-r-X8N-pe5dejFW6tXBn7WKQWqOweJVPnCXlhJfBDSqIXgEwCRO2lZGoZt_wUQzNdd4MKpJRveCfPH7F32xwSrNHCa4MDeiZ2XsUFVRW4uJ6pf68iZsNRfjoAtf5QGqoG56OHaGx0"/>
+<img alt="" class="w-8 h-8 rounded-full border-2 border-surface" data-alt="portrait of a confident woman with natural lighting and smiling expression" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBUmdA40gtS8VnN6erG5ZKru5TrsrH9cIzFwdDstpKZAsvISuB2vztiSXO49jpsWyCPw55uzekJwEDLyhtyaK7zj_JItwz9u7fvw0KkXk-L_3A1Snh_F8ndE8VDv59VVz_TWm_wd3r2TEzMF_j5iikvdOrcnWztwtmlQs-hvlglFFyzMQs0vlpVWDEGRPK7a4DmjJ46t9RUiEGcu19uigYcQnF6bxebfFtYl4oI3q6C-f7r7Yvt9Glj10kDpDCBcy7dhd1Avw_0hM"/>
+<div class="w-8 h-8 rounded-full border-2 border-surface bg-primary flex items-center justify-center text-[10px] font-bold">+12</div>
+</div>
+<button class="font-label text-xs text-primary font-bold flex items-center gap-2 group">
+                                JOIN DEBUG SESSION
+                                <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Feature Grid -->
+<section class="max-w-7xl mx-auto px-8 mb-32">
+<h2 class="font-headline text-4xl font-bold mb-16 text-center">Engineered for <span class="text-secondary">Understanding</span></h2>
+<div class="grid md:grid-cols-3 gap-8">
+<!-- Deep Neural Debugging -->
+<div class="group p-8 rounded-xl bg-surface-container-low hover:bg-surface-container-high transition-all duration-500 relative overflow-hidden">
+<div class="absolute -right-8 -bottom-8 w-32 h-32 bg-primary/5 rounded-full blur-2xl group-hover:bg-primary/20 transition-all"></div>
+<div class="w-14 h-14 rounded-full bg-primary-container/20 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">neurology</span>
+</div>
+<h3 class="font-headline text-xl font-bold mb-4">Deep Neural Debugging</h3>
+<p class="font-body text-on-surface-variant leading-relaxed">
+                        Our proprietary AI traces your cognitive path to identify exactly where your logic diverged from the solution.
+                    </p>
+</div>
+<!-- Curated Curriculum -->
+<div class="group p-8 rounded-xl bg-surface-container-low hover:bg-surface-container-high transition-all duration-500 relative overflow-hidden">
+<div class="absolute -right-8 -bottom-8 w-32 h-32 bg-secondary/5 rounded-full blur-2xl group-hover:bg-secondary/20 transition-all"></div>
+<div class="w-14 h-14 rounded-full bg-secondary-container/20 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">auto_stories</span>
+</div>
+<h3 class="font-headline text-xl font-bold mb-4">Curated Curriculum</h3>
+<p class="font-body text-on-surface-variant leading-relaxed">
+                        Dynamic pathways that adapt in real-time based on your specific conceptual hurdles and learning speed.
+                    </p>
+</div>
+<!-- Collaborative Analysis -->
+<div class="group p-8 rounded-xl bg-surface-container-low hover:bg-surface-container-high transition-all duration-500 relative overflow-hidden">
+<div class="absolute -right-8 -bottom-8 w-32 h-32 bg-tertiary/5 rounded-full blur-2xl group-hover:bg-tertiary/20 transition-all"></div>
+<div class="w-14 h-14 rounded-full bg-tertiary-container/20 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-tertiary" style="font-variation-settings: 'FILL' 1;">groups</span>
+</div>
+<h3 class="font-headline text-xl font-bold mb-4">Collaborative Analysis</h3>
+<p class="font-body text-on-surface-variant leading-relaxed">
+                        Solve complex puzzles with a global community of thinkers. Share insights, not just answers.
+                    </p>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="max-w-5xl mx-auto px-8 mb-40">
+<div class="relative p-12 md:p-20 rounded-lg bg-surface-container overflow-hidden text-center">
+<div class="absolute inset-0 mesh-gradient opacity-30"></div>
+<div class="relative z-10">
+<h2 class="font-headline text-4xl md:text-5xl font-bold mb-8">Ready to evolve your <br/><span class="text-primary italic">learning DNA?</span></h2>
+<p class="font-body text-lg text-on-surface-variant mb-12 max-w-xl mx-auto">
+                        Join 20k+ students who are mastering concepts by embracing their mistakes.
+                    </p>
+<button class="px-10 py-5 bg-on-surface text-surface rounded-full font-label font-bold text-lg hover:scale-105 transition-all">
+                        Get Started For Free
+                    </button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full rounded-t-[3rem] mt-20 bg-slate-950/60 backdrop-blur-lg">
+<div class="flex flex-col md:flex-row justify-between items-center w-full px-12 py-16 mx-auto max-w-7xl">
+<div class="flex flex-col items-center md:items-start mb-8 md:mb-0">
+<div class="text-lg font-bold text-indigo-400 font-headline mb-4">Concept Fix</div>
+<p class="text-slate-500 font-body text-sm max-w-xs text-center md:text-left">
+                    Bridging the gap between knowing and understanding through generative cognition.
+                </p>
+</div>
+<div class="flex flex-wrap justify-center gap-12 mb-8 md:mb-0">
+<div class="flex flex-col gap-3">
+<span class="font-label text-xs font-bold text-indigo-400 uppercase tracking-widest">Resources</span>
+<a class="text-slate-500 hover:text-indigo-300 transition-colors text-sm font-body" href="#">Documentation</a>
+<a class="text-slate-500 hover:text-indigo-300 transition-colors text-sm font-body" href="#">Changelog</a>
+</div>
+<div class="flex flex-col gap-3">
+<span class="font-label text-xs font-bold text-indigo-400 uppercase tracking-widest">Legal</span>
+<a class="text-slate-500 hover:text-indigo-300 transition-colors text-sm font-body" href="#">Privacy</a>
+<a class="text-slate-500 hover:text-indigo-300 transition-colors text-sm font-body" href="#">Status</a>
+</div>
+</div>
+<div class="flex flex-col items-center md:items-end">
+<div class="flex gap-6 mb-4">
+<span class="material-symbols-outlined text-slate-500 hover:text-indigo-400 cursor-pointer transition-colors">brand_awareness</span>
+<span class="material-symbols-outlined text-slate-500 hover:text-indigo-400 cursor-pointer transition-colors">hub</span>
+<span class="material-symbols-outlined text-slate-500 hover:text-indigo-400 cursor-pointer transition-colors">terminal</span>
+</div>
+<span class="text-slate-500 font-label text-[10px] uppercase tracking-widest">© 2024 Concept Fix. Luminous Cognition.</span>
+</div>
+</div>
+</footer>
+</body></html>

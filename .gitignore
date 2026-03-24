@@ -1,0 +1,33 @@
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+
+# Node
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+lib/
+lib64/
+*.egg-info/
+*.egg
+
+# Database
+*.sqlite3
+*.db
+
+# IDE and OS
+.DS_Store
+.vscode/
+.idea/
